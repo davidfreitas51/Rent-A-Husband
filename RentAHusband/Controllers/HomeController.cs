@@ -23,7 +23,7 @@ namespace RentAHusband.Controllers
 		}
 		public IActionResult Cadastro()
 		{
-			return View();
+			return View("~/Views/MaridoDeAluguel/Create.cshtml");
 		}
 		public IActionResult Privacy()
 		{

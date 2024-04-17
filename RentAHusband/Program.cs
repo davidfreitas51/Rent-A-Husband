@@ -1,3 +1,6 @@
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
+using RentAHusband.Data;
 namespace RentAHusband
 {
 	public class Program
@@ -5,6 +8,8 @@ namespace RentAHusband
 		public static void Main(string[] args)
 		{
 			var builder = WebApplication.CreateBuilder(args);
+			builder.Services.AddDbContext<RentAHusbandContext>(options =>
+			    options.UseSqlServer(builder.Configuration.GetConnectionString("RentAHusbandContext") ?? throw new InvalidOperationException("Connection string 'RentAHusbandContext' not found.")));
 
 			// Add services to the container.
 			builder.Services.AddControllersWithViews();
