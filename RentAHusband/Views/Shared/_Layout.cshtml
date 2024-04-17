@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - RentAHusband</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/RentAHusband.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/main.css" />
+</head>
+<body>
+    <header id="header">
+        <section id="header">
+            <div class="container">
+                <!-- Nav -->
+                <nav id="nav">
+                    <ul>
+                        <li><a class="icon solid fa-home" asp-area="" asp-controller="Home" asp-action="Index"><span>Introdução</span></a></li>
+                        <li><a class="icon solid fa-cog" asp-area="" asp-controller="Home" asp-action="Maridos"><span>Maridos de Aluguel</span></a></li>
+                        <li><a class="icon solid fa-retweet" asp-area="" asp-controller="Home" asp-action="Cadastro"><span>Cadastre-se</span></a></li>
+                        <li><a class="icon solid fa-sitemap" asp-area="" asp-controller="Home" asp-action="Privacy"><span>Sobre nós</span></a></li>
+                    </ul>
+                </nav>
+            </div>
+        </section>
+    </header>
+
+
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2024 - RentAHusband - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
