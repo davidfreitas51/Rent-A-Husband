@@ -36,9 +36,15 @@ body {
 ol, ul {
 	list-style: none;
 }
-.classeLegal{
+.titulo {
+	font-size: 36px;
+	color: darkblue;
 	margin-top: 40px;
-	margin-bottom: 10px;
+	margin-bottom: 20px;
+	font-family: Arvo, Arial, sans-serif;
+}
+.subtitulo {
+	margin-bottom: 20px;
 }
 blockquote, q {
 	quotes: none;
@@ -1875,7 +1881,7 @@ input, select, textarea {
 	#header > .container {
 		padding: 3em 0;
 		border-bottom: solid 2px #e5e5e5;
-		box-shadow: inset 0px -8px 0px 0px #fff, inset 0px -10px 0px 0px #e5e5e5;
+
 	}
 
 #nav ul li {
