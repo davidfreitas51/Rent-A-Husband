@@ -19,7 +19,7 @@ namespace RentAHusband.Controllers
 		}
 		public IActionResult Maridos()
 		{
-			return View();
+			return View("~/Views/MaridoDeAluguel/Index.cshtml");
 		}
 		public IActionResult Cadastro()
 		{
